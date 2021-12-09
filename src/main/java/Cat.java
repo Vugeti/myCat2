@@ -18,26 +18,26 @@ public class Cat extends Predator {
         this.name = name;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-
-        if (obj.hashCode() != obj.hashCode()) return false;
-        if (!(obj instanceof Cat)) return false;
-        Cat cat = (Cat) obj;
-        if (cat.species.hashCode() == cat.species.hashCode()) return true;
-        return name != cat.name;
-//        if (species != null ? !species.equals(cat.species) : cat.species != null) return false;
+//    @Override
+//    public boolean equals(Object obj) {
+//
+//        if (obj.hashCode() != obj.hashCode()) return false;
+//        if (!(obj instanceof Cat)) return false;
+//        Cat cat = (Cat) obj;
+//        if (cat.species.hashCode() == cat.species.hashCode()) return true;
+//        return name != cat.name;
+//       if (species != null ? !species.equals(cat.species) : cat.species != null) return false;
 //        if (getWeight() != 0 ? getWeight()==cat.getWeight() : cat.getWeight() == 0) return false;
 //        return getColor() != null ? getColor()==cat.getColor() : cat.getColor() == null;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = name.hashCode();
-        result = 31 * result + (species != null ? species.hashCode() : 0);
-        result = 31 * result + (getWeight() != 0 ? getWeight() : 0);
-        return result;
-    }
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        int result = name.hashCode();
+//        result = 31 * result + (species != null ? species.hashCode() : 0);
+//        result = 31 * result + (getWeight() != 0 ? getWeight() : 0);
+//        return result;
+//    }
 
 
     public void sleeping() {
