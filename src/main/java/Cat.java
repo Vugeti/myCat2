@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Cat extends Predator {
     private String name;
     private String species;
@@ -17,9 +19,26 @@ public class Cat extends Predator {
     }
 
     @Override
-    public int hashCode() {
-        return getColor().hashCode();
+    public boolean equals(Object obj) {
+
+        if (obj.hashCode() != obj.hashCode()) return false;
+        if (!(obj instanceof Cat)) return false;
+        Cat cat = (Cat) obj;
+        if (cat.species.hashCode() == cat.species.hashCode()) return true;
+        return name != cat.name;
+//        if (species != null ? !species.equals(cat.species) : cat.species != null) return false;
+//        if (getWeight() != 0 ? getWeight()==cat.getWeight() : cat.getWeight() == 0) return false;
+//        return getColor() != null ? getColor()==cat.getColor() : cat.getColor() == null;
     }
+
+    @Override
+    public int hashCode() {
+        int result = name.hashCode();
+        result = 31 * result + (species != null ? species.hashCode() : 0);
+        result = 31 * result + (getWeight() != 0 ? getWeight() : 0);
+        return result;
+    }
+
 
     public void sleeping() {
         System.out.println("ZZzzz-Zzzz");
@@ -39,19 +58,11 @@ public class Cat extends Predator {
 
     public void doThisDay(Day doThisDay) {
         switch (doThisDay) {
-            case MONDAY, WEDNESDAY, FRIDAY:
-                sleeping();
-                break;
-            case TUESDAY, THURSDAY, SATURDAY:
-                hunting();
-                break;
-            case SUNDAY:
-                tyGyDyking();
-                break;
-            default:
-                lickBalls();
+            case MONDAY, WEDNESDAY, FRIDAY -> sleeping();
+            case TUESDAY, THURSDAY, SATURDAY -> hunting();
+            case SUNDAY -> tyGyDyking();
+            default -> lickBalls();
         }
     }
-
 }
 
