@@ -37,7 +37,6 @@ public class Cat extends Predator {
         System.out.println("my balls will sparkle like the master's bald head");
     }
 
-
     public void doThisDay(Day doThisDay) {
         switch (doThisDay) {
             case MONDAY, WEDNESDAY, FRIDAY:

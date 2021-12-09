@@ -6,6 +6,7 @@ public enum Color {
     CHOCOLATE_POINT("коричневый");
 
     private String title;
+
     Color(String title) {
         this.title = title;
     }

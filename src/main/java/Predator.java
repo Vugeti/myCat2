@@ -8,7 +8,6 @@ public abstract class Predator {
         this.weight = weight;
     }
 
-
     public Color getColor() {
         return color;
     }

@@ -9,7 +9,6 @@ public class Main {
         cat1.doThisDay(Day.ANYDAY);
         System.out.println("name: "+ cat1.getName()+"\ncolor: " + cat1.getColor() + "\nweight: " + cat1.getWeight() + "g" + "\nspecies: " + cat1.getSpecies()+"\n");
 
-
         System.out.println("name: "+ cat.getName()+"\ncolor: " + cat.getColor() + "\nweight: " + cat.getWeight() + "g" + "\nspecies: " + cat.getSpecies()+"\n");
         System.out.println(cat.getName()+": ");
         cat.doThisDay(Day.MONDAY);
